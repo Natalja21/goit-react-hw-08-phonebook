@@ -94,3 +94,7 @@ końcu łańcucha jest obowiązkowy.
 3. Jeżeli wszystkie kroki zakończyły się sukcesem, zbudowana wersja produkcyjna
    plików projektu wysyłana jest do gałęzi `gh-pages`. W przeciwnym razie, w
    logu wykonania skryptu zostanie wskazane z czym jest problem.
+
+Welcome to the contact book. For further use please login to your account or
+register./Добро пожаловать в книгу контактов. Для дальнейшего использования
+войдите в свою учетную запись или зарегистрируйтесь.
