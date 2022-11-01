@@ -2,11 +2,12 @@ import { ContactBox, ContactsTitle } from './Contacts.styled';
 import ContactsForm from 'components/Contacts/AddContactForm/ContactsForm';
 import SearchBar from 'components/Contacts/SearchBar/SearchBar';
 
+
 const ContactsPage = () => {
   return (
     <ContactBox>
       <div className="section">
-        <div className="container">
+          <div className="container">
            <ContactsTitle>Contacts</ContactsTitle>
           <ContactsForm/>        
           <SearchBar/>
