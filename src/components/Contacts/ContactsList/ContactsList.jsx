@@ -4,7 +4,7 @@ import Loader from 'components/Loader/Loader';
 import { useSelector, useDispatch } from 'react-redux';
 import { selectFilter, selectContacts } from 'redux/selectors';
 import { useEffect } from 'react';
-import { fetchContacts } from 'redux/contacts-operations';
+import { fetchContacts } from 'redux/contacts-redux/contacts-operations';
 
 const ContactsList = () => {
   const { items, isLoading, error } = useSelector(selectContacts);

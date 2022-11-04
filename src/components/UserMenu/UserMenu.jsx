@@ -5,7 +5,8 @@ import { logout } from "redux/auth-redux/auth-operations";
 
 const UserMenu = () => {
     const dispatch = useDispatch();
-    const {user} = useSelector(selectAuth)
+    const { user } = useSelector(selectAuth)
+    console.log(user.name)
     return (
         <Box>
             <Text>{user.name}</Text>

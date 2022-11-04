@@ -1,26 +1,41 @@
 import axios from "axios";
+const instance = axios.create({
+    baseURL: "https://connections-api.herokuapp.com",
+});
 
-axios.defaults.baseURL = 'https://connections-api.herokuapp.com';
-
-const setAuthHeader = token => {
-    axios.defaults.headers.common.Authorization = `Bearer ${token}`;
+const setToken = (token) => {
+    if (token) {
+        return instance.defaults.headers.common.Authorization = `Bearer ${token}`;
+    }
+    instance.defaults.headers.common.Authorization = "";
 }
-const clearAuthHeader = () => {
-    axios.defaults.headers.common.Authorization = '';
-};
 
 export const signupApi = async (signupData) => {
-    const { data } = await axios.post("/users/signup", signupData);
-    setAuthHeader(data.token);
+    const { data } = await instance.post("/users/signup", signupData);
+
+    instance.defaults.headers.common.Authorization = `Bearer ${data.token}`;
     return data;
 }
 
 export const loginApi = async (loginData) => {
-    const { data } = await axios.post("/users/login", loginData);
-    setAuthHeader(data.token);
+    const { data } = await instance.post("/users/login", loginData);
+    instance.defaults.headers.common.Authorization = `Bearer ${data.token}`;
     return data;
 }
 export const logoutApi = async () => {
-    await axios.post("/users/logout");
-    clearAuthHeader();
+    const { data } = await instance.post("/users/logout");
+    instance.defaults.headers.common.Authorization = "";
+    return data
+
 }
+export const currentUserApi = async (token) => {
+    try {
+        setToken(token);
+        const { data } = await instance.get("/users/current");
+        return data;
+    } catch (error) {
+        setToken();
+        throw error;
+    }
+}
+export default instance

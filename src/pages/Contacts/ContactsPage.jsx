@@ -1,6 +1,7 @@
 import { ContactBox, ContactsTitle } from './Contacts.styled';
 import ContactsForm from 'components/Contacts/AddContactForm/ContactsForm';
 import SearchBar from 'components/Contacts/SearchBar/SearchBar';
+import ContactsList from 'components/Contacts/ContactsList/ContactsList'
 
 
 const ContactsPage = () => {
@@ -10,7 +11,8 @@ const ContactsPage = () => {
           <div className="container">
            <ContactsTitle>Contacts</ContactsTitle>
           <ContactsForm/>        
-          <SearchBar/>
+          <SearchBar />
+          <ContactsList/>
         </div>
       </div>
     </ContactBox>

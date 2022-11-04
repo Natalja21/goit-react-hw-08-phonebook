@@ -1,11 +1,12 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { signup, login, logout } from 'redux/auth-redux/auth-operations';
+import { signup, login, logout, current } from 'redux/auth-redux/auth-operations';
 const initialState = {
     user: {},
     token: null,
     isLogin: false,
     loading: false,
     error: null,
+    isLoadingUser: false,
 };
 
 const authSlice = createSlice({
@@ -51,36 +52,24 @@ const authSlice = createSlice({
             store.isLogin = false
 
         },
-        [logout.rejected]: (store) => {
+        [logout.rejected]: (store, { payload }) => {
             store.loading = false;
+            store.error = payload;
+        },
+        [current.pending]: (store) => {
+            store.isLoadingUser = true;
             store.error = null;
         },
-        // [register.fulfilled](state, action) {
-        //     state.user = action.payload.user;
-        //     state.token = action.payload.token;
-        //     state.isLoggedIn = true;
-        // },
-        // [logIn.fulfilled](state, action) {
-        //     state.user = action.payload.user;
-        //     state.token = action.payload.token;
-        //     state.isLoggedIn = true;
-        // },
-        // [logOut.fulfilled](state) {
-        //     state.user = { name: null, email: null };
-        //     state.token = null;
-        //     state.isLoggedIn = false;
-        // },
-        // [refreshUser.pending](state) {
-        //     state.isRefreshing = true;
-        // },
-        // [refreshUser.fulfilled](state, action) {
-        //     state.user = action.payload;
-        //     state.isLoggedIn = true;
-        //     state.isRefreshing = false;
-        // },
-        // [refreshUser.rejected](state) {
-        //     state.isRefreshing = false;
-        // },
+        [current.fulfilled]: (store, { payload }) => {
+            store.isLoadingUser = false;
+            store.user = payload.user;
+            store.isLogin = true;
+        },
+        [current.rejected]: (store, { payload }) => {
+            store.isLoadingUser = false;
+            store.error = payload;
+        },
+
     },
 });
 
