@@ -5,7 +5,6 @@ import { Notify } from 'notiflix/build/notiflix-notify-aio';
 import { addContact } from 'redux/contacts-redux/contacts-operations';
 import { selectContacts } from 'redux/selectors';
 
-
 const ContactsForm = () => {
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
@@ -44,7 +43,7 @@ const ContactsForm = () => {
       return Notify.warning(`${number} is already in the Phonebook`);
     }
     dispatch(addContact({ name, number }));
-console.log({name, number});
+
     reset();
   };
 

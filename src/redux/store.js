@@ -22,7 +22,7 @@ const middleware = [
     }),
 ];
 const authPersistConfig = {
-    key: 'auth',
+    key: 'token',
     storage,
     whitelist: ['token'],
 };
