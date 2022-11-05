@@ -59,6 +59,7 @@ const authSlice = createSlice({
         [current.pending]: (store) => {
             store.isLoadingUser = true;
             store.error = null;
+            store.loading = false;
         },
         [current.fulfilled]: (store, { payload }) => {
             store.isLoadingUser = false;

@@ -1,5 +1,10 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import { signupApi, loginApi, logoutApi, currentUserApi } from '../../servis/api-auth';
+import {
+    signupApi,
+    loginApi,
+    logoutApi,
+    currentUserApi,
+} from '../../servis/api-auth';
 
 export const signup = createAsyncThunk(
     'auth/signup',
@@ -37,7 +42,7 @@ export const logout = createAsyncThunk(
     'auth/logout',
     async (_, { rejectWithValue }) => {
         try {
-            await logoutApi()
+            await logoutApi();
         } catch ({ response }) {
             const error = {
                 status: response.status,
@@ -49,21 +54,22 @@ export const logout = createAsyncThunk(
 );
 
 export const current = createAsyncThunk(
-    "auth/current",
+    'auth/current',
     async (_, { rejectWithValue, getState }) => {
+        const { auth } = getState();
+        const persistToken = auth.token;
+        if (persistToken === null) {
+            return rejectWithValue('Unable to fetch user');
+        }
         try {
-            const { auth } = getState();
-            if (auth.token === null) {
-                return
-            }
-            const result = await currentUserApi(auth.token);
+            const result = await currentUserApi(persistToken);
             return result;
         } catch ({ response }) {
             const error = {
                 status: response.status,
-                message: response.data.message
-            }
+                message: response.data.message,
+            };
             return rejectWithValue(error);
         }
     }
-)
+);
