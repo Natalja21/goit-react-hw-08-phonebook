@@ -25,14 +25,14 @@ const LoginForm = () => {
     <Form onSubmit={handleSubmit}>
       <Label>
         Email
-        <Input type="email" name="email" placeholder="Enter Email" required />
+        <Input type="email" name="email" placeholder="Enter email" required />
       </Label>
       <Label>
         Password
         <Input
           type="current-password"
           name="password"
-          placeholder="Enter Password"
+          placeholder="Enter password"
           required
         />
       </Label>

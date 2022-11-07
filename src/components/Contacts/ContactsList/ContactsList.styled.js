@@ -6,6 +6,9 @@ export const List = styled.ul`
   margin: auto;
   padding: 20px;
   @media screen and (min-width: 768px) {
-    width: 400px;
+    width: 320px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 500px;
   }
 `;

@@ -14,4 +14,5 @@ export const Box = styled.div`
   @media screen and (min-width: 768px) {
     justify-content: space-evenly;
   }
+ 
 `;

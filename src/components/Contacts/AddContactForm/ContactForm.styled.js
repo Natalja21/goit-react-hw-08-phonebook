@@ -5,11 +5,13 @@ export const Form = styled.form`
   border: 1px solid rgb(244, 205, 151);
   padding: 20px;
   border-radius: 10px;
-  box-shadow: inset 0 0 10px rgb(244, 205, 151),
-    inset 0 0 40px rgb(160, 111, 43);
+  box-shadow: inset 0 0 10px rgb(244, 205, 151);
   margin: auto;
   @media screen and (min-width: 768px) {
     width: 320px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 500px;
   }
 `;
 
