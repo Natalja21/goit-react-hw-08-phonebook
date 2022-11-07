@@ -1,6 +1,8 @@
 import styled from 'styled-components';
 
 export const NotFoundTitle = styled.h2`
+ margin-top: 80px;
+  margin-bottom: 30px;
   font-size: 26px;
   line-height: 1.62;
   letter-spacing: 0.06em;

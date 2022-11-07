@@ -1,4 +1,4 @@
-import { Label, Input } from './SearchBar.styled';
+import {  Input } from './SearchBar.styled';
 import { useSelector, useDispatch } from 'react-redux';
 import { setFilter } from 'redux/filter-redux/filter-slice';
 import { selectFilter } from 'redux/selectors';

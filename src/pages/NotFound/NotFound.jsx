@@ -1,5 +1,5 @@
-import img from '../../img/cat.jpg';
-import { NotFoundTitle, NotFoundImg, NotFoundText } from './NotFound.styled';
+
+import { NotFoundTitle, NotFoundText } from './NotFound.styled';
 const NotFound = () => {
   return (
     <main>
