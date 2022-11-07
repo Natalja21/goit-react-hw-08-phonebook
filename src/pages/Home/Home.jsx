@@ -1,6 +1,5 @@
 import { HomeTitle, HomeSubtitle } from './Home.styled';
 
-
 const Home = () => {
   return (
     <main>

@@ -22,7 +22,7 @@ const LoginForm = () => {
     form.reset();
   };
   return (
-    <Form onSubmit={handleSubmit}> 
+    <Form onSubmit={handleSubmit}>
       <Label>
         Email
         <Input type="email" name="email" placeholder="Enter Email" required />

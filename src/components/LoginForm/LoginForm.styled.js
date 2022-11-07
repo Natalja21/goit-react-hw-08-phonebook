@@ -5,12 +5,12 @@ export const Form = styled.form`
   border: 1px solid rgb(244, 205, 151);
   padding: 20px;
   border-radius: 10px;
-  box-shadow: inset 0 0 10px rgb(244, 205, 151), inset 0 0 40px rgb(160, 111, 43);
-  
+  box-shadow: inset 0 0 10px rgb(244, 205, 151),
+    inset 0 0 40px rgb(160, 111, 43);
 `;
 
 export const Label = styled.label`
- display: flex;
+  display: flex;
   flex-direction: column;
   color: rgb(244, 205, 151);
   margin-bottom: 10px;

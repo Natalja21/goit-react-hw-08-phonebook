@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const ContactBox = styled.div`
-   @media screen and (min-width: 768px){
+  @media screen and (min-width: 768px) {
     display: flex;
     justify-content: space-evenly;
     align-items: flex-start;

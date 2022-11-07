@@ -1,5 +1,10 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { signup, login, logout, current } from 'redux/auth-redux/auth-operations';
+import {
+    signup,
+    login,
+    logout,
+    current,
+} from 'redux/auth-redux/auth-operations';
 const initialState = {
     user: {},
     token: null,
@@ -13,7 +18,7 @@ const authSlice = createSlice({
     name: 'auth',
     initialState,
     extraReducers: {
-        [signup.pending]: (store) => {
+        [signup.pending]: store => {
             store.loading = true;
             store.error = null;
         },
@@ -27,7 +32,7 @@ const authSlice = createSlice({
             store.loading = false;
             store.error = payload;
         },
-        [login.pending]: (store) => {
+        [login.pending]: store => {
             store.loading = true;
             store.error = null;
         },
@@ -41,22 +46,21 @@ const authSlice = createSlice({
             store.loading = false;
             store.error = payload;
         },
-        [logout.pending]: (store) => {
+        [logout.pending]: store => {
             store.loading = true;
             store.error = null;
         },
-        [logout.fulfilled]: (store) => {
+        [logout.fulfilled]: store => {
             store.loading = false;
             store.user = {};
             store.token = null;
-            store.isLogin = false
-
+            store.isLogin = false;
         },
         [logout.rejected]: (store, { payload }) => {
             store.loading = false;
             store.error = payload;
         },
-        [current.pending]: (store) => {
+        [current.pending]: store => {
             store.isLoadingUser = true;
             store.error = null;
             store.loading = false;
@@ -70,7 +74,6 @@ const authSlice = createSlice({
             store.isLoadingUser = false;
             store.error = payload;
         },
-
     },
 });
 

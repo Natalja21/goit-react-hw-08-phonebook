@@ -1,14 +1,14 @@
 import styled from 'styled-components';
 
 export const Form = styled.form`
- max-width: 400px;
+  max-width: 400px;
   border: 1px solid rgb(244, 205, 151);
   padding: 20px;
   border-radius: 10px;
   box-shadow: inset 0 0 10px rgb(244, 205, 151),
     inset 0 0 40px rgb(160, 111, 43);
-    margin: auto;
-     @media screen and (min-width: 768px) {
+  margin: auto;
+  @media screen and (min-width: 768px) {
     width: 300px;
   }
 `;

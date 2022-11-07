@@ -8,4 +8,4 @@ export const Title = styled.h2`
   font-size: 18px;
   line-height: 1.17;
   letter-spacing: 0.03em;
-`
+`;

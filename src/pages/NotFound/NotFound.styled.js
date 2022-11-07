@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const NotFoundTitle = styled.h2`
- margin-top: 80px;
+  margin-top: 80px;
   margin-bottom: 30px;
   font-size: 26px;
   line-height: 1.62;
@@ -10,9 +10,9 @@ export const NotFoundTitle = styled.h2`
   text-align: center;
   color: rgb(244, 205, 151);
   @media screen and (min-width: 768px) {
-		font-size: 36px;
-  line-height: 1.36;
-	}
+    font-size: 36px;
+    line-height: 1.36;
+  }
 `;
 
 export const NotFoundText = styled.p`
@@ -23,7 +23,7 @@ export const NotFoundText = styled.p`
   text-align: center;
   color: rgb(244, 205, 151);
   @media screen and (min-width: 768px) {
-		font-size: 36px;
-  line-height: 1.36;
-	}
+    font-size: 36px;
+    line-height: 1.36;
+  }
 `;

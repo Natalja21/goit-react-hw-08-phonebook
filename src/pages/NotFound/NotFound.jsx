@@ -1,4 +1,3 @@
-
 import { NotFoundTitle, NotFoundText } from './NotFound.styled';
 const NotFound = () => {
   return (

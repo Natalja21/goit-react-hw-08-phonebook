@@ -10,9 +10,9 @@ export const HomeTitle = styled.h1`
   text-align: center;
   color: rgb(244, 205, 151);
   @media screen and (min-width: 768px) {
-		font-size: 36px;
-  line-height: 1.36;
-	}
+    font-size: 36px;
+    line-height: 1.36;
+  }
 `;
 export const HomeSubtitle = styled.p`
   font-size: 26px;
@@ -22,7 +22,7 @@ export const HomeSubtitle = styled.p`
   text-align: center;
   color: rgb(244, 205, 151);
   @media screen and (min-width: 768px) {
-		font-size: 36px;
-  line-height: 1.36;
-	}
+    font-size: 36px;
+    line-height: 1.36;
+  }
 `;

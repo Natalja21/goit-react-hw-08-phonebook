@@ -13,8 +13,8 @@ export const Item = styled.li`
   margin-top: 10px;
   color: rgb(244, 205, 151);
   list-style: none;
-   box-shadow: inset 0 0 10px rgb(244, 205, 151), inset 0 0 40px rgb(160, 111, 43);
-
+  box-shadow: inset 0 0 10px rgb(244, 205, 151),
+    inset 0 0 40px rgb(160, 111, 43);
 `;
 export const Text = styled.p`
   padding: 10px;
@@ -22,7 +22,6 @@ export const Text = styled.p`
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.03em;
-  
 `;
 export const Button = styled.button`
   height: 100%;

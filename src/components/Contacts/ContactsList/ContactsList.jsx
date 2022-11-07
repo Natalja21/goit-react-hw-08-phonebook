@@ -1,5 +1,5 @@
-import { List } from "./ContactsList.styled";
-import ContactsItem from "./ContactsItem";
+import { List } from './ContactsList.styled';
+import ContactsItem from './ContactsItem';
 import Loader from 'components/Loader/Loader';
 import { useSelector, useDispatch } from 'react-redux';
 import { selectFilter, selectContacts } from 'redux/selectors';
@@ -27,18 +27,17 @@ const ContactsList = () => {
 
   const contactsFiltered = getFilteredContacts();
 
-
   return (
     <>
       {isLoading && <Loader />}
       {error && <div>Something went wrong, please, try again</div>}
-      <List >
+      <List>
         {contactsFiltered.length > 0 &&
           contactsFiltered.map(({ id, name, number }) => (
             <ContactsItem key={id} id={id} name={name} number={number} />
           ))}
       </List>
-   </>
+    </>
   );
 };
 

@@ -1,4 +1,4 @@
-import {  Form, Label, Input, Button } from './RegisterForm.styled';
+import { Form, Label, Input, Button } from './RegisterForm.styled';
 import { signup } from 'redux/auth-redux/auth-operations';
 import { useDispatch } from 'react-redux';
 

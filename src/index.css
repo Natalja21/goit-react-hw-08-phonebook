@@ -8,11 +8,13 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: hsla(42, 35%, 44%, 0.569);
-  background-image:linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("./img/phone-desk.jpg");
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url('./img/phone-desk.jpg');
   background-repeat: repeat-y;
   background-position: top 40% center;
-
-
 }
 
 code {
@@ -31,7 +33,6 @@ h5,
 h6,
 p {
   margin: 0;
-  
 }
 
 ul {
@@ -45,22 +46,21 @@ img {
 }
 
 .container {
-  
   padding-left: 20px;
   padding-right: 20px;
   margin: 0 auto;
 
   @media screen and (min-width: 480px) {
     width: 480px;
-  };
+  }
 
   @media screen and (min-width: 768px) {
     width: 768px;
-  };
+  }
 
   @media screen and (min-width: 1200px) {
     width: 1200px;
-  };
+  }
 }
 
 .section {

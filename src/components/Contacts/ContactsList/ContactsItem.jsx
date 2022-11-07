@@ -4,17 +4,14 @@ import { useDispatch } from 'react-redux';
 import { removeContact } from '../../../redux/contacts-redux/contacts-operations';
 
 const ContactsItem = items => {
-    const dispatch = useDispatch();
+  const dispatch = useDispatch();
   const { id, number, name } = items;
   return (
-    <Item >
+    <Item>
       <Text>
         {name}: {number}
       </Text>
-      <Button
-        type="button"
-        onClick={() => dispatch(removeContact(id))}
-      >
+      <Button type="button" onClick={() => dispatch(removeContact(id))}>
         Delete
       </Button>
     </Item>
