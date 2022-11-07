@@ -79,7 +79,7 @@ const ContactsForm = () => {
           onChange={handleChangeInput}
         />
       </Label>
-      <Button type="submit">Add contact</Button>
+      <Button type="submit">Add</Button>
     </Form>
   );
 };

@@ -1,8 +1,11 @@
 import styled from 'styled-components';
 
 export const List = styled.ul`
-  width: 400px;
+  max-width: 400px;
   height: auto;
   margin: auto;
   padding: 20px;
+  @media screen and (min-width: 768px) {
+    width: 300px;
+  }
 `;

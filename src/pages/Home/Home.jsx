@@ -1,5 +1,5 @@
-import { HomeImg, HomeTitle, HomeSubtitle } from './Home.styled';
-import img from '../../img/welcom.jpg';
+import { HomeTitle, HomeSubtitle } from './Home.styled';
+
 
 const Home = () => {
   return (
@@ -7,9 +7,8 @@ const Home = () => {
       <section className="section">
         <div className="container">
           <HomeTitle>Welcome to the contact book !</HomeTitle>
-          <HomeImg src={`${img}`} alt="welcom" />
           <HomeSubtitle>
-            For further use please login to your account or register ;)
+            For further use please login to your account or register !
           </HomeSubtitle>
         </div>
       </section>

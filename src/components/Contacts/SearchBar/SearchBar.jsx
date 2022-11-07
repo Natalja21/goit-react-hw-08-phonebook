@@ -8,16 +8,14 @@ const SearchBar = () => {
   const filter = useSelector(selectFilter);
   const dispatch = useDispatch();
   return (
-    <Label>
-      Find contacts by Name
       <Input
         type="text"
         name="filter"
+        placeholder=' Find contacts by Name'
         required
         value={filter}
         onChange={e => dispatch(setFilter(e.currentTarget.value))}
       />
-    </Label>
   );
 };
 

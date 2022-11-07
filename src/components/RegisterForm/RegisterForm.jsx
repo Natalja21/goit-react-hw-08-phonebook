@@ -20,23 +20,22 @@ const RegisterForm = () => {
     <Form onSubmit={handleSubmit}>
       <Label>
         Name
-        <Input type="text" name="name" placeholder="Enter Name" required />
+        <Input type="text" name="name" placeholder="Enter name" required />
       </Label>
 
       <Label>
         Email
-        <Input type="email" name="email" placeholder="Enter Email" required />
+        <Input type="email" name="email" placeholder="Enter email" required />
       </Label>
       <Label>
         Password
         <Input
           type="current-password"
           name="password"
-          placeholder="Enter Password"
+          placeholder="Enter password"
           required
         />
       </Label>
-
       <Button type="submit">Sign Up</Button>
     </Form>
   );

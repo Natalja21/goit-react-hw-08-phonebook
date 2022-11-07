@@ -1,32 +1,46 @@
 import styled from 'styled-components';
 
 export const Item = styled.li`
-  width: 100%;
-  height: 30px;
-  border: transparent;
-  border-radius: 4px;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.01em;
-  color: #857c7c;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 20px;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  background-color: transparent;
+  border: 1px solid rgb(244, 205, 151);
+  box-sizing: border-box;
   border-radius: 4px;
-  box-shadow: 0 0 10px rgba(255, 72, 0, 0.474);
+  margin-top: 10px;
+  color: rgb(244, 205, 151);
+  list-style: none;
+   box-shadow: inset 0 0 10px rgb(244, 205, 151), inset 0 0 40px rgb(160, 111, 43);
+
 `;
 export const Text = styled.p`
   padding: 10px;
-  width: auto;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  
 `;
 export const Button = styled.button`
+  height: 100%;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  background: transparent;
+  text-align: center;
+  align-items: center;
+  color: rgb(244, 205, 151);
   border-radius: 4px;
-  width: 80px;
+  border: 1px solid rgb(244, 205, 151);
+  outline: none;
   cursor: pointer;
-  padding: 2px 10px;
   display: block;
-  border: transparent;
-  background: #fff;
-  box-shadow: 0 0 10px rgba(255, 72, 0, 0.474);
-  color: #85807c;
+  &:hover,
+  &:focus {
+    box-shadow: inset 0 0 10px rgb(244, 205, 151);
+  }
 `;

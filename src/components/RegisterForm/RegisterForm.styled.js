@@ -1,63 +1,64 @@
 import styled from 'styled-components';
 
-
 export const Form = styled.form`
-  display: flex;
-  flex-direction: column;
-  width: 400px;
-  height: 200px;
+  max-width: 400px;
   margin: auto;
-  
+  border: 1px solid rgb(244, 205, 151);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: inset 0 0 10px rgb(244, 205, 151), inset 0 0 40px rgb(160, 111, 43);
 `;
 
 export const Label = styled.label`
   display: flex;
   flex-direction: column;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.01em;
-  color: #857c7c;
+  color: rgb(244, 205, 151);
   margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
 `;
 export const Input = styled.input`
   width: 100%;
   height: 30px;
   padding-left: 10px;
-  border: transparent;
+  background-color: transparent;
+  border: 1px solid rgb(244, 205, 151);
   box-sizing: border-box;
   border-radius: 4px;
   font-size: 14px;
   line-height: 1.14;
-  letter-spacing: 0.01em;
-  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  outline: transparent;
+  letter-spacing: 0.03em;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  outline: none;
   margin-top: 10px;
-  box-shadow: 0 0 10px rgba(255, 72, 0, 0.474);
-  color: #857c7c;
+  color: rgb(244, 205, 151);
   &:focus {
-    border: 1px solid #f39c21;
-   
+    box-shadow: inset 0 0 10px rgb(244, 205, 151);
   }
-   &::placeholder {
-      color: orange;
-    }
+  &::placeholder {
+    color: rgb(160, 111, 43);
+  }
 `;
 export const Button = styled.button`
   font-weight: 700;
-  font-size: 16px;
-  line-height: 1.87;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  background: transparent;
   text-align: center;
   align-items: center;
-  letter-spacing: 0.06em;
-  background: #fff;
-  color: #85807c;
-  box-shadow: 0 0 10px rgba(255, 72, 0, 0.474);
+  color: rgb(244, 205, 151);
   border-radius: 4px;
-  border: transparent;
+  border: 1px solid rgb(244, 205, 151);
   outline: none;
   cursor: pointer;
   padding: 5px 10px;
+  margin: 20px auto 0 auto;
   display: block;
-  margin: 10px auto;
+  &:hover,
+  &:focus {
+    box-shadow: inset 0 0 10px rgb(244, 205, 151);
+  }
 `;

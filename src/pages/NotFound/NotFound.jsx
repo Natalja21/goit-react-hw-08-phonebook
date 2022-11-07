@@ -6,7 +6,6 @@ const NotFound = () => {
       <section className="section">
         <div className="container">
           <NotFoundTitle>ERROR 404</NotFoundTitle>
-          <NotFoundImg src={`${img}`} alt="cat" />
           <NotFoundText>Ooops, page not found :( </NotFoundText>
         </div>
       </section>

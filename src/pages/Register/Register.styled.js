@@ -2,9 +2,19 @@ import styled from 'styled-components';
 
 export const Title = styled.h2`
   text-align: center;
-  color: orange;
-`
+  color: rgb(160, 111, 43);
+  margin-bottom: 10px;
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+`;
 export const Text = styled.p`
   text-align: center;
-  color: #857c7c;
-`
+  color: rgb(244, 205, 151);
+  margin-bottom: 40px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+`;
