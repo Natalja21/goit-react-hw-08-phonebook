@@ -17,13 +17,12 @@ export const Button = styled.button`
   padding: 5px;
   background: transparent;
   color: rgb(244, 205, 151);
-  box-shadow: 0 0 10px rgba(255, 72, 0, 0.474), 0 0 40px rgb(244, 205, 151);
+ border: 1px solid rgb(244, 205, 151);
   border-radius: 4px;
-  border: transparent;
   outline: none;
   cursor: pointer;
-  &:focus,
-  &:hover {
-    color: rgb(160, 111, 43);
+&:hover,
+  &:focus {
+    box-shadow: inset 0 0 10px rgb(244, 205, 151);
   }
 `;
