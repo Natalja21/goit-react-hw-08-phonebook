@@ -6,8 +6,6 @@ export const Input = styled.input`
   margin: 0 auto;
   border: 1px solid rgb(244, 205, 151);
   border-radius: 10px;
-  box-shadow: inset 0 0 10px rgb(244, 205, 151),
-    inset 0 0 40px rgb(160, 111, 43);
   height: 30px;
   padding-left: 10px;
   background-color: transparent;
@@ -20,7 +18,8 @@ export const Input = styled.input`
   outline: none;
   color: rgb(244, 205, 151);
   &:focus {
-    box-shadow: inset 0 0 10px rgb(244, 205, 151);
+     box-shadow: inset 0 0 10px rgb(244, 205, 151),
+    inset 0 0 40px rgb(160, 111, 43);
   }
   &::placeholder {
     color: rgb(160, 111, 43);

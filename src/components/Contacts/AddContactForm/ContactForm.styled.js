@@ -9,7 +9,7 @@ export const Form = styled.form`
     inset 0 0 40px rgb(160, 111, 43);
   margin: auto;
   @media screen and (min-width: 768px) {
-    width: 300px;
+    width: 320px;
   }
 `;
 

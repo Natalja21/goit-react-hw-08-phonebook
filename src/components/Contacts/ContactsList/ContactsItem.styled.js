@@ -5,7 +5,7 @@ export const Item = styled.li`
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  height: 40px;
+  height: 50px;
   background-color: transparent;
   border: 1px solid rgb(244, 205, 151);
   box-sizing: border-box;
